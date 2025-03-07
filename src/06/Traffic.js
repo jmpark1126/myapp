@@ -56,7 +56,7 @@ export default function Traffic() {
       if(!tdata || !c1 || !selC1) return ;
 
       let tm = tdata.filter(item => item['사고유형대분류'] === selC1)
-                // .map(item => item['사고유형중분류']); //도로이탈 중복!
+                // .map(item => item['사고유형중분류']); //중분류>도로이탈 중복!
                 .map(item => item['사고유형']);
       setC2(tm);
     }, [selC1]);
@@ -81,18 +81,18 @@ export default function Traffic() {
                                   </div>
                                 </div> )
       setInfo(tm);
-    }, [selC2])
+    }, [selC2]);
 
   return (
     <div className="w-full h-full flex flex-col justify-start items-center">
       {/* c1이 존재하는 경우에만(&&) 실행 */}
       {c1 && <TrafficNav title = '대분류'
-                  c = {c1} //대분류 데이터
+                  c = {c1} //대분류 데이터 목록
                   sel = {selC1} //현재 선택된 대분류
                   setSel = {setSelC1} //selC1을 바꿀 수 있는 함수
       />}
-      {c2 && <TrafficNav title = '중분류'
-                  c = {c2} //중중분류 데이터
+      {c2 && <TrafficNav title = '사고유형'
+                  c = {c2} //중중분류 데이터 목록록
                   sel = {selC2} //현재 선택된 중분류
                   setSel = {setSelC2} //selC2를 바꿀 수 있는 함수
       />}
