@@ -2,7 +2,8 @@ import './App.css';
 import { RiHomeHeartFill } from "react-icons/ri";
 // import MyDiv1 from './03/MyDiv1';
 // import MyList from './04/MyList';
-import Lotto from './05/Lotto';
+// import Lotto from './05/Lotto';
+import MyClock from './02/MyClock';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <main className='grow w-full flex justify-center items-center overflow-y-auto'>
         {/* <MyDiv1 /> */}
         {/* <MyList /> */}
-        <Lotto />
+        {/* <Lotto /> */}
+        <MyClock />
       </main>
       <footer className='flex justify-center items-center h-20 bg-black text-slate-100'>
         © Park JiMin
