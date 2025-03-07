@@ -3,7 +3,8 @@ import { RiHomeHeartFill } from "react-icons/ri";
 // import MyDiv1 from './03/MyDiv1';
 // import MyList from './04/MyList';
 // import Lotto from './05/Lotto';
-import MyClock from './02/MyClock';
+// import MyClock from './02/MyClock';
+import Traffic from './06/Traffic';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         {/* <MyDiv1 /> */}
         {/* <MyList /> */}
         {/* <Lotto /> */}
-        <MyClock />
+        {/* <MyClock /> */}
+        < Traffic />
       </main>
       <footer className='flex justify-center items-center h-20 bg-black text-slate-100'>
         © Park JiMin
