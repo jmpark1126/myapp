@@ -49,7 +49,7 @@ export default function Traffic() {
       setC1(tm); //선택된 대분류는 c1에 저장
     }, [tdata]);
 
-    //selC1 결정 후에 실행
+    //4. selC1 결정 후에 실행
     useEffect(()=>{
       //중분류 만들기
       //해당 값이 없으면 return 처리
@@ -61,7 +61,7 @@ export default function Traffic() {
       setC2(tm);
     }, [selC1]);
 
-    //selC2 결정 후에 실행행
+    //5. selC2 결정 후에 실행
     useEffect(()=>{
       if(!selC2) return;
 

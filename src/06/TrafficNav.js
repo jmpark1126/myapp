@@ -1,7 +1,7 @@
 import TailButton from '../UI/TailButton';
 
 export default function TrafficNav({title, c, sel, setSel}) {
-    //넘어오는 카테고리 목록 갯수(c)만큼 버튼 생성
+    //넘어오는 카테고리 목록 갯수(c)만큼 버튼(cTag) 생성 반복
     const cTag = c.map(item => <TailButton 
                                     key = {item}
                                     caption = {item}
