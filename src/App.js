@@ -11,7 +11,7 @@ import Gallery from './08/Gallery';
 
 function App() {
   return (
-    <div className="flex flex-col w-full h-screen mx-auto">
+    <div className="flex flex-col w-full min-h-screen mx-auto">
       <header className='flex justify-between items-center text-xl font-bold h-20 p-10 bg-slate-200'>
         <p>리액트 기초</p>
         <p><RiHomeHeartFill /></p>
