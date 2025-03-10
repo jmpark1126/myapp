@@ -6,7 +6,8 @@ import { RiHomeHeartFill } from "react-icons/ri";
 // import MyClock from './02/MyClock';
 // import Traffic from './06/Traffic';
 // import MyRef from './07/MyRef';
-import MyRefAdd from './07/MyRefAdd';
+// import MyRefAdd from './07/MyRefAdd';
+import Gallery from './08/Gallery';
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
         {/* <MyClock /> */}
         {/* < Traffic /> */}
         {/* <MyRef /> */}
-        <MyRefAdd />
+        {/* <MyRefAdd /> */}
+        <Gallery />
 
       </main>
       <footer className='flex justify-center items-center h-20 bg-black text-slate-100'>
