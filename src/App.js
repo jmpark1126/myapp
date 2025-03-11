@@ -1,6 +1,7 @@
 import './App.css';
 import { RiHomeHeartFill } from "react-icons/ri";
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import MyDiv1 from './03/MyDiv1';
 import MyList from './04/MyList';
 import Lotto from './05/Lotto';
@@ -10,6 +11,7 @@ import MyRef from './07/MyRef';
 import MyRefAdd from './07/MyRefAdd';
 import Gallery from './08/Gallery';
 import RouteMain from './09/RouteMain';
+import RecoilMain from './10/RecoilMain';
 
 function App() {
   return (
@@ -32,6 +34,9 @@ function App() {
             </li>
             <li className='mx-2 p-2 rounded-md hover:bg-white hover:text-blue-600'>
               <Link to='/gallery'>관광</Link>  
+            </li> 
+            <li className='mx-2 p-2 rounded-md hover:bg-white hover:text-blue-600'>
+              <Link to='/recoil'>Recoil 예제</Link>  
             </li>                
           </ul>
           <p><Link to='/'><RiHomeHeartFill /></Link></p>
@@ -43,6 +48,7 @@ function App() {
               <Route path='/traffic' element={<Traffic />} />
               <Route path='/add' element={<MyRefAdd />} />
               <Route path='/gallery' element={<Gallery />} />
+              <Route path='/recoil' element={<RecoilMain />} />
             </Routes>
         </main>
         <footer className='flex justify-center items-center h-20 bg-black text-slate-100'>
