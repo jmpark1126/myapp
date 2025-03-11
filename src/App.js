@@ -12,6 +12,7 @@ import MyRefAdd from './07/MyRefAdd';
 import Gallery from './08/Gallery';
 import RouteMain from './09/RouteMain';
 import RecoilMain from './10/RecoilMain';
+import Rest from './11/Rest';
 
 function App() {
   return (
@@ -37,7 +38,10 @@ function App() {
             </li> 
             <li className='mx-2 p-2 rounded-md hover:bg-white hover:text-blue-600'>
               <Link to='/recoil'>Recoil 예제</Link>  
-            </li>                
+            </li>         
+            <li className='mx-2 p-2 rounded-md hover:bg-white hover:text-blue-600'>
+              <Link to='/rest'>JSON CRUD 예제</Link>  
+            </li>         
           </ul>
           <p><Link to='/'><RiHomeHeartFill /></Link></p>
         </header>
@@ -49,6 +53,8 @@ function App() {
               <Route path='/add' element={<MyRefAdd />} />
               <Route path='/gallery' element={<Gallery />} />
               <Route path='/recoil' element={<RecoilMain />} />
+              <Route path='/recoil' element={<RecoilMain />} />
+              <Route path='/rest' element={<Rest />} />
             </Routes>
         </main>
         <footer className='flex justify-center items-center h-20 bg-black text-slate-100'>
