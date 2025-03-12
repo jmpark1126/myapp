@@ -79,8 +79,26 @@ export default function Rest() {
         else jsonPost();
     }
 
-    const jsonPut = () => {
-        
+    const jsonPut = async () => {
+        const putData = {
+            id : isUpdateId,
+            title : txt1Ref.current.value,
+            author : txt2Ref.current.value
+        }
+
+        const resp = await fetch(`${url}/${isUpdateId}`, {
+            method : 'PUT',
+            headers : {'Content-Type' : 'application/json'},
+            body : JSON.stringify(putData)
+        });
+
+        const data = await resp.json();
+        //update 된 id이면 받은 데이터를 넣고 아니면 그대로 둔다
+        setTdata(tdata.map(item => item.id === isUpdateId ? data : item));
+
+        txt1Ref.current.value = '';
+        txt1Ref.current.focus();
+        txt2Ref.current.value = '';
     }
 
     useEffect(()=>{
