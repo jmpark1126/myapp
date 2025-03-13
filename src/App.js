@@ -12,7 +12,8 @@ import MyRefAdd from './07/MyRefAdd';
 import Gallery from './08/Gallery';
 import RouteMain from './09/RouteMain';
 import RecoilMain from './10/RecoilMain';
-import Rest from './11/Rest';
+// import Rest from './11/Rest';
+import Rest from './12/Rest';
 
 function App() {
   return (
