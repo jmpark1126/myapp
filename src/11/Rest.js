@@ -99,6 +99,9 @@ export default function Rest() {
         txt1Ref.current.value = '';
         txt1Ref.current.focus();
         txt2Ref.current.value = '';
+        
+        setIsUpdate(false);
+        setIsUpdateId('');
     }
 
     useEffect(()=>{
