@@ -7,8 +7,8 @@ export default function RefTest() {
     const ref2 = useRef();
     const ref3 = useRef();
 
-    let arr = useState([]);
-    const [list, setList] = useState([]);
+    const [history, setHistory] = useState([]);
+    const [fin, setFin] = useState([]);
 
     //더하기 버튼
     const handleAdd = () => {
@@ -26,13 +26,17 @@ export default function RefTest() {
         let num1 = parseInt(ref1.current.value);
         let num2 = parseInt(ref2.current.value);
         ref3.current.value = num1+num2;
-        arr.push(num1, num2, ref3.current.value);
-        console.log(arr);
 
-        let temp = arr.map(item => <div>{item+","}</div>);
-        temp.slice(3);
+        setHistory([...history, ref3.current.value]);
+
+        let temp = history.map(item=>(
+            <div>
+                <p key={item}>{item}</p>
+            </div>
+        ));
         console.log(temp);
-        setList(temp);
+        setFin(temp)
+
     };
 
     //초기화 버튼
@@ -65,7 +69,10 @@ export default function RefTest() {
                                     text-gray-900 text-center rounded-lg text-xl p-2.5" />
                 <TailButton caption='초기화' bcolor='orange' handleClick={handleClear} />
                 <div className="flex justify-center items-center text-xl font-bold">
-                    {list}
+                    {/* {history.map((item, index)=>(
+                        <p key={index}>{item},</p>
+                    ))} */}
+                    {fin}
                 </div>
             </div>
         </div>
