@@ -17,6 +17,7 @@ import Rest from './12/Rest';
 import LottoTest from './05_test/Lotto';
 import TrafficTest from './06_test/Traffic';
 import RefTest from './07_test/RefTest';
+import Test from './08_test/Gallery';
 
 function App() {
   return (
@@ -47,7 +48,7 @@ function App() {
               <Link to='/rest'>JSON CRUD 예제</Link>  
             </li>    
             <li className='mx-2 p-2 rounded-md hover:bg-white hover:text-blue-600'>
-              <Link to='/RefTest'>test 예제</Link>  
+              <Link to='/Test'>test 예제</Link>  
             </li>      
           </ul>
           <p><Link to='/'><RiHomeHeartFill /></Link></p>
@@ -62,7 +63,7 @@ function App() {
               <Route path='/recoil' element={<RecoilMain />} />
               <Route path='/recoil' element={<RecoilMain />} />
               <Route path='/rest' element={<Rest />} />
-              <Route path='/RefTest' element={<RefTest />} />
+              <Route path='/Test' element={<Test />} />
             </Routes>
         </main>
         <footer className='flex justify-center items-center h-20 bg-black text-slate-100'>

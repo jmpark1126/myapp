@@ -7,9 +7,6 @@ export default function RefTest() {
     const ref2 = useRef();
     const ref3 = useRef();
 
-    const [history, setHistory] = useState([]);
-    const [fin, setFin] = useState([]);
-
     //더하기 버튼
     const handleAdd = () => {
         if(ref1.current.value == '') {
@@ -27,16 +24,6 @@ export default function RefTest() {
         let num2 = parseInt(ref2.current.value);
         ref3.current.value = num1+num2;
 
-        setHistory([...history, ref3.current.value]);
-
-        let temp = history.map(item=>(
-            <div>
-                <p key={item}>{item}</p>
-            </div>
-        ));
-        console.log(temp);
-        setFin(temp)
-
     };
 
     //초기화 버튼
@@ -46,12 +33,18 @@ export default function RefTest() {
         ref3.current.value = '';
     }
 
+    //onFocus 되면 input 박스 초기화
+    const onFocus = (ref) => {
+        ref.current.value = '';
+        ref3.current.value = '';
+    }
+
     return (
         <div className="w-10/12 flex justify-center items-center">
             <div className="bg-slate-50 grid grid-cols-5 gap-2 m-5 p-5">
                 <input type="number" id='txt1'
                     ref={ref1}
-
+                    onFocus={()=>onFocus(ref1)}
                     className="bg-gray-50 border border-gray-300 
                                     text-gray-900 text-center rounded-lg text-xl p-2.5" />
                 <div className="flex justify-center items-center text-xl font-bold">
@@ -59,7 +52,7 @@ export default function RefTest() {
                 </div>
                 <input type="number" id='txt2'
                     ref={ref2}
-
+                    onFocus={()=>onFocus(ref2)}
                     className="bg-gray-50 border border-gray-300 
                                     text-gray-900 text-center rounded-lg text-xl p-2.5" />
                 <TailButton caption='=' bcolor='lime' handleClick={handleAdd} />
@@ -68,12 +61,6 @@ export default function RefTest() {
                     className="bg-gray-50 border border-gray-300 
                                     text-gray-900 text-center rounded-lg text-xl p-2.5" />
                 <TailButton caption='초기화' bcolor='orange' handleClick={handleClear} />
-                <div className="flex justify-center items-center text-xl font-bold">
-                    {/* {history.map((item, index)=>(
-                        <p key={index}>{item},</p>
-                    ))} */}
-                    {fin}
-                </div>
             </div>
         </div>
     )
