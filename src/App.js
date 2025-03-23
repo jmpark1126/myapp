@@ -17,10 +17,12 @@ import Rest from './12/Rest';
 import LottoTest from './05_test/Lotto';
 import TrafficTest from './06_test/Traffic';
 import RefTest from './07_test/RefTest';
-import Test from './08_test/Gallery';
+// import Test from './11_test/test';
+import Test from './03_test/test01';
 
 function App() {
   return (
+    /** 
     <BrowserRouter>
       <div className="flex flex-col w-full min-h-screen mx-auto">
         <header className='flex justify-between items-center text-xl font-bold h-20 p-10 bg-slate-200'>
@@ -48,7 +50,7 @@ function App() {
               <Link to='/rest'>JSON CRUD 예제</Link>  
             </li>    
             <li className='mx-2 p-2 rounded-md hover:bg-white hover:text-blue-600'>
-              <Link to='/Test'>test 예제</Link>  
+              <Link to='/test'>test 예제</Link>  
             </li>      
           </ul>
           <p><Link to='/'><RiHomeHeartFill /></Link></p>
@@ -61,9 +63,8 @@ function App() {
               <Route path='/add' element={<MyRefAdd />} />
               <Route path='/gallery' element={<Gallery />} />
               <Route path='/recoil' element={<RecoilMain />} />
-              <Route path='/recoil' element={<RecoilMain />} />
               <Route path='/rest' element={<Rest />} />
-              <Route path='/Test' element={<Test />} />
+              <Route path='/test' element={<Test />} />
             </Routes>
         </main>
         <footer className='flex justify-center items-center h-20 bg-black text-slate-100'>
@@ -71,6 +72,10 @@ function App() {
         </footer>
       </div>
     </BrowserRouter>
+    */
+   <div>
+    <Test />
+   </div>
   );
 }
 

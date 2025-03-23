@@ -97,8 +97,8 @@ export default function Rest() {
         setTdata(tdata.map(item => item.id === isUpdateId ? data : item));
 
         txt1Ref.current.value = '';
-        txt1Ref.current.focus();
         txt2Ref.current.value = '';
+        txt1Ref.current.focus();
         
         setIsUpdate(false);
         setIsUpdateId('');
