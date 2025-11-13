@@ -5,3 +5,5 @@
 // 개인 수정중22222222
 
 // 개인 수정중33333333
+
+console.log("Hello from personal branch!");
